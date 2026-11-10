@@ -1,0 +1,12 @@
+package com.example.productnotification;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ProductNotificationServiceApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ProductNotificationServiceApplication.class, args);
+    }
+}
