@@ -6,6 +6,7 @@ spring:
     consumer:
       group-id: notification-service
       auto-offset-reset: earliest
+      enable-auto-commit: false          # ← WE now control commits
       key-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
       properties:
