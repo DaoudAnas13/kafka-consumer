@@ -1,4 +1,8 @@
 package com.example.productnotification.exception;
 
-public class PoisonMessageException {
+/** Non-retryable: no point retrying — send straight to the DLT. */
+public class PoisonMessageException extends RuntimeException {
+    public PoisonMessageException(String message) {
+        super(message);
+    }
 }

@@ -31,6 +31,7 @@ public class NotificationService {
             return;   // ack happens after return; offset still advances
         }
 
+
         // ── Business effect (here: pretend we send a notification) ──
         log.info("New product created:");
         log.info("  Event ID : {}", event.eventId());

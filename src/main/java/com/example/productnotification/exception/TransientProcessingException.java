@@ -1,4 +1,8 @@
 package com.example.productnotification.exception;
 
-public class TransientProcessingException {
+/** Retryable: may succeed on a later attempt (network, temp outage…). */
+public class TransientProcessingException extends RuntimeException {
+    public TransientProcessingException(String message) {
+        super(message);
+    }
 }
