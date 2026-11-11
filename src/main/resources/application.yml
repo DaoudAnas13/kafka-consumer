@@ -1,6 +1,14 @@
 spring:
   application:
     name: product-notification-service
+  datasource:
+    url: jdbc:h2:file:./data/notificationdb;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
   kafka:
     bootstrap-servers: localhost:9094
     consumer:
@@ -15,3 +23,5 @@ spring:
         spring.json.use.type.headers: false
         spring.json.value.default.type: com.example.productnotification.dto.ProductCreatedEvent
         spring.json.trusted.packages: "com.example.productnotification.dto"
+server:
+  port: 8082
